@@ -9,18 +9,20 @@ var options_errors = {
         },
 
     title: {
-        text:'Hospital Errors Count by Year'
+        text:'Yearly Hospital Errors Count between 2012-2015 at Springfield Hospital'
 
     },
 
-    subtitle: {
-        // text:'Source: WorldClimate.com'
+    // subtitle: {
+    //     text:'Hospital Errors Count by Year'
 
-    },
+    // },
 
     xAxis: {
             categories: [],
             // opposite:true
+            // reversed: false,
+            // gridLineWidth: 1,
     },
 
     yAxis: {
@@ -30,7 +32,7 @@ var options_errors = {
     },
 
     tooltip: {
-        // valueSuffix: '°C'
+        valueSuffix: ' Errors'
     },
 
     // legend: {
@@ -65,7 +67,8 @@ var options_errors = {
 var options_mortality = {
     chart: {
         renderTo: 'mortality',
-        type: 'column'
+        type: 'column',
+        height: 200,
         },
 
     title: {
@@ -113,7 +116,8 @@ var options_mortality = {
 var options_trained = {
     chart: {
         renderTo: 'trained',
-        type: 'column'
+        type: 'column',
+        height: 200,
         },
 
     title: {
@@ -137,7 +141,7 @@ var options_trained = {
     },
 
     tooltip: {
-        // valueSuffix: '°C'
+        valueSuffix: ' Days'
     },
 
     legend: {
@@ -232,7 +236,9 @@ $.get("_data/HospitalErrors.csv", function (data) {
 
     options_errors.series = errorData;
     options_mortality.series = mortalityData;
-    options_trained.series = [trainedData[0]];
+    var shortTrained = trainedData[0];
+    shortTrained.name='Training'
+    options_trained.series = [shortTrained];
 
     options_errors.xAxis.categories = xAxisCategories;
     options_mortality.xAxis.categories = xAxisCategories;
