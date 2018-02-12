@@ -117,19 +117,19 @@ a:hover {
 }
 
 #errors {
-    width: 600px;
+    width: 1000px;
     height: 400px;
     margin: 0 auto;
 }
 
 #mortality {
-    width: 600px;
+    width: 1000px;
     height: 400px;
     margin: 0 auto;
 }
 
 #trained {
-    width: 600px;
-    height: 400px;
+    width: 1000px;
+    height: 200px;
     margin: 0 auto;
 }
