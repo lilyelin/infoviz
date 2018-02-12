@@ -115,3 +115,21 @@ a:hover {
 	height: 400px;
 	margin: 0 auto;
 }
+
+#errors {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#mortality {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#trained {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
