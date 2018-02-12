@@ -9,14 +9,14 @@ var options_errors = {
         },
 
     title: {
-        text:'Yearly Hospital Errors Count between 2012-2015 at Springfield Hospital'
+        text:'Impact of Training on Hospital Outcomes in Hospital Errors and Mortality'
 
     },
 
-    // subtitle: {
-    //     text:'Hospital Errors Count by Year'
+    subtitle: {
+        text:'Source: Springfield Hospital (2012-2015)'
 
-    // },
+    },
 
     xAxis: {
             categories: [],
