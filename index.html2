@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>US 2012 Olympics Medal Count</title>
+  <link rel="stylesheet" href="_css/main.css">
+  <!-- <script src="_js/jquery-1.11.0.min.js"></script> -->
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+  <div id="container1"></div>
+  <div id="container2"></div>
+  <div id="container3"></div>
+  <script type="text/javascript" src="_js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+"use strict";
+// PART 1: SET UP CHART OPTIONS & GENERATE USING INLINE DATA
+// Options for Chart 1: top chart Hospital Errors
+
+var options_top = {
+    chart: {
+        renderTo: "container1",
+        type: 'column',
+        spacingBottom: 5,
+        style: {
+            fontSize: '14px'
+        }
+    },
+    legend: {
+        verticalAlign: 'top',
+        style: {
+            fontSize: '18px'
+        }
+    },
+    title: {
+        text: 'Hospital Errors'
+    },
+    subtitle: {
+        text: 'Source: Springfield Hospital'
+    },
+    xAxis: {
+        style: {
+            fontSize: '22px'
+        },
+        opposite: true,
+        categories: [
+            'Surgical Infection',
+            'Catheter Infection',
+            'Surgical Error',
+            'Incorrect Dosage',
+            'IncorrectMedication',
+            'DelayInTreatment',
+            'Misdiagnosis',
+            'IVError'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Number of Errors'
+        },
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: '2012',
+        data: [7200,4500,3300,1100,900,50,1000,50]
+
+    }, {
+        name: '2013',
+        data: [6500,4000,3200,1000,750,50,900,50]
+
+    }, {
+        name: '2014',
+        data: [5000,2400,3000,400,500,50,950,50]
+
+    }, {
+        name: '2015',
+        data: [3000,500,1000,100,400,50,100,50]
+
+    }]
+};
+
+var options_middle = {
+    chart: {
+        renderTo: "container2",
+        type: 'column',
+        spacingTop: 5,
+        style: {
+            fontSize: '14px'
+        }
+    },
+    title: {
+        text:''
+    },
+    xAxis: {
+        labels: {
+            enabled: false
+        },
+        categories: [
+            'Surgical Infection',
+            'Catheter Infection',
+            'Surgical Error',
+            'Incorrect Dosage',
+            'IncorrectMedication',
+            'DelayInTreatment',
+            'Misdiagnosis',
+            'IVError'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        
+        min: 0,
+        reversed: true,
+        title: {
+            text: '% Mortality'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: '2012',
+        data: [45,15,20,30,20,15,55,10],
+        showInLegend: false
+    }, {
+        name: '2013',
+        data: [20,10,10,20,10,10,40,10],
+        showInLegend: false
+    }, {
+        name: '2014',
+        data: [10,2,5,15,5,10,5,5],
+        showInLegend: false
+    }, {
+        name: '2015',
+        data: [5,2,0,5,10,4,5,5],
+        showInLegend: false
+    }]
+};
+
+var options_bottom = {
+    chart: {
+        renderTo: "container3",
+        type: 'column',
+        style: {
+            fontSize: '14px'
+        }
+    },
+    title: {
+        text: 'Average Number of Days Training'
+    },
+
+    xAxis: {
+        labels: {
+            enabled: false
+        },
+        categories: [
+            'Surgical Infection',
+            'Catheter Infection',
+            'Surgical Error',
+            'Incorrect Dosage',
+            'IncorrectMedication',
+            'DelayInTreatment',
+            'Misdiagnosis',
+            'IVError'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Days Training'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        data: [10,5,50,5,10,7,20,15], showInLegend: false, color: '##A9A9A9'
+    }]
+};
+
+
+
+var chartt = new Highcharts.Chart(options_top);
+var chartm = new Highcharts.Chart(options_middle);
+var chartb = new Highcharts.Chart(options_bottom);
